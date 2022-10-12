@@ -1,0 +1,123 @@
+.footer {
+  @include flex-box-positioning(baseline);
+  padding: 60px 0;
+  background-color: var(--hero-color);
+}
+
+.footer-block {
+  @include flex-box-positioning(baseline);
+  @extend .container;
+}
+
+.socials__text {
+  @include font(14px, 700, 1.14);
+  letter-spacing: 0.03em;
+  color: var(--footer-text-color);
+  text-transform: uppercase;
+
+  margin-right: 183px;
+}
+
+.address {
+  margin-top: 20px;
+
+  &__link {
+    font-size: 14px;
+    line-height: 1.71;
+    letter-spacing: 0.03em;
+    color: var(--footer-link-color);
+    text-decoration: none;
+    font-style: normal;
+  
+    transition-property: background-color, color;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
+  }
+
+  &__link--white {
+    color: var(--footer-text-color);
+  }
+
+  &__link:hover,
+  &__link:focus {
+    color: var(--accent-color);
+  }
+
+  &__item:not(:last-child) {
+    margin-bottom: 9px;  
+  }
+}
+
+.socials {
+  margin-left: 70px;
+  text-align: left;
+
+  &__list {
+    display: flex;
+    margin-top: 20px;
+    gap: 10px;
+  }
+
+  &__item {
+    @include flex-box-positioning(center);
+    justify-content: center;
+    @include size(44px, 44px);
+    cursor: pointer;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 50%;
+    border-width: 0px;
+  
+    transition-property: background-color;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
+  }
+
+  &__svg {
+    fill: var(--footer-text-color);
+  }
+
+  &__item:hover,
+  &__item:focus {
+    border-radius: 50%;
+    background: var(--accent-color);
+    fill: var(--footer-text-color);
+  }
+}
+
+.subscription {
+
+  &__label {
+    @include font(14px, 700, 1.14);
+    letter-spacing: 0.03em;
+    color: var(--footer-text-color);
+    display: block;
+    margin-bottom: 20px;
+  
+    text-transform: uppercase;
+  }
+
+  &__input {
+    @include size(358px, 50px);
+    background-color: var(--hero-color);
+    color: var(--footer-text-color);
+    padding: 16px 15px;
+    margin-right: 12px;
+    border-radius: 4px;
+  
+    border: 1px solid rgba(255, 255, 255, 0.3);
+  }
+
+  &__input::placeholder {
+    @include font(16px, 400, 1.25);
+    letter-spacing: 0.03em;
+  }
+
+  &-button__text {
+    display: inline-block;
+  }
+
+  &-button__icon {
+    fill: var(--footer-text-color);
+    margin-left: 10px; 
+  }
+}

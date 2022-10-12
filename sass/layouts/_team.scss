@@ -1,0 +1,75 @@
+.team-list {
+    display: flex;
+
+    & .worker-item + .worker-item {
+        margin-left: 30px;   
+    }
+}
+ 
+.worker-item {
+    text-align: center;
+    box-shadow:  0px 1px 3px rgb(0 0 0 / 12%), 0px 1px 1px rgb(0 0 0 / 14%), 0px 2px 1px rgb(0 0 0 / 20%);
+    border-radius: 0px 0px 4px 4px;
+    background-color: var(--main-block-text-color);
+}
+
+.section-worker {
+    background-color: var(--secondary-background-color); 
+}
+
+.worker-title {
+    margin-bottom: 10px;
+    font-weight: 500;
+}
+
+.worker-description {
+    font-size: 16px;
+    line-height: 1.18;
+    letter-spacing: 0.03em;
+    color: var(--secondary-text-color);
+}
+
+.worker-social {
+    display: flex;
+    justify-content: center;
+    margin-top: 16px;
+    gap: 10px;
+}
+
+.social-link {
+    @include flex-box-positioning(center);
+    justify-content: center;
+    @include size(44px, 44px);
+    fill: var(--icons-color);
+    border-radius: 50%;
+
+    transition-property: background-color, fill;
+    transition-duration: var(--duration);
+    transition-timing-function: var(--timing-function);
+
+    &:hover,
+    &:focus {
+        background-color: var(--accent-color);
+        fill: var(--footer-text-color);   
+    }
+}
+
+.title {
+    @include font(36px, 700, 1.16);
+    letter-spacing:  0.03em;
+    text-align: center;
+    margin-bottom: 50px;
+    color: var(--primary-text-color);
+}
+
+.visually-hidden {
+    @include size(1px, 1px);
+    position: absolute;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    white-space: nowrap;
+    clip-path: inset(100%);
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+  }
