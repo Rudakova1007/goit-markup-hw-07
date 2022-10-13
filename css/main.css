@@ -116,7 +116,8 @@ textarea {
   transition: transform 1000ms;
 }
 
-.portfolio-item:hover .overlay-text {
+.portfolio-link:hover .overlay-text,
+.portfolio-link:focus .overlay-text {
   transform: translateY(0);
 }
 
@@ -126,8 +127,8 @@ textarea {
   line-height: 1.55;
 }
 
-.portfolio-item .portfolio-link:hover,
-.portfolio-item .portfolio-link:focus {
+.portfolio-link :hover,
+.portfolio-link :focus {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06), 1px 4px 6px rgba(0, 0, 0, 0.16);
 }
 
@@ -425,6 +426,7 @@ textarea {
   transition-property: border-color;
   transition-duration: var(--duration);
   transition-timing-function: var(--timing-function);
+  color: black;
 }
 .comment__input:hover, .comment__input:focus {
   border-color: var(--accent-color);
@@ -805,6 +807,10 @@ textarea {
   transition-duration: var(--duration);
   transition-timing-function: var(--timing-function);
 }
+.clients-link:hover svg, .clients-link:focus svg {
+  border-color: var(--accent-color);
+  fill: var(--accent-color);
+}
 .clients-link:hover, .clients-link:focus {
   border-color: var(--accent-color);
   fill: var(--accent-color);
@@ -829,7 +835,6 @@ textarea {
   letter-spacing: 0.03em;
   color: var(--footer-text-color);
   text-transform: uppercase;
-  margin-right: 183px;
 }
 
 .address {
@@ -865,13 +870,12 @@ textarea {
   margin-top: 20px;
   gap: 10px;
 }
-.socials__item {
+.socials__link {
   display: flex;
   align-items: center;
   justify-content: center;
   width: 44px;
   height: 44px;
-  cursor: pointer;
   background: rgba(255, 255, 255, 0.1);
   border-radius: 50%;
   border-width: 0px;
@@ -882,12 +886,15 @@ textarea {
 .socials__svg {
   fill: var(--footer-text-color);
 }
-.socials__item:hover, .socials__item:focus {
+.socials__link:hover, .socials__link:focus {
   border-radius: 50%;
   background: var(--accent-color);
   fill: var(--footer-text-color);
 }
 
+.subscription {
+  margin-left: 80px;
+}
 .subscription__label {
   font-size: 14px;
   font-weight: 700;

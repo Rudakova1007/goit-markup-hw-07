@@ -14,8 +14,6 @@
   letter-spacing: 0.03em;
   color: var(--footer-text-color);
   text-transform: uppercase;
-
-  margin-right: 183px;
 }
 
 .address {
@@ -58,11 +56,10 @@
     gap: 10px;
   }
 
-  &__item {
+  &__link {
     @include flex-box-positioning(center);
     justify-content: center;
     @include size(44px, 44px);
-    cursor: pointer;
     background: rgba(255, 255, 255, 0.1);
     border-radius: 50%;
     border-width: 0px;
@@ -76,15 +73,18 @@
     fill: var(--footer-text-color);
   }
 
-  &__item:hover,
-  &__item:focus {
+  &__link:hover,
+  &__link:focus {
     border-radius: 50%;
     background: var(--accent-color);
     fill: var(--footer-text-color);
   }
+
 }
 
 .subscription {
+
+margin-left: 80px;
 
   &__label {
     @include font(14px, 700, 1.14);

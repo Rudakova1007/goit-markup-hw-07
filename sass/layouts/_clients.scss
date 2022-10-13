@@ -44,6 +44,12 @@
     transition-duration: var(--duration);
     transition-timing-function: var(--timing-function);
 
+    &:hover svg,
+    &:focus svg {
+        border-color: var(--accent-color);
+        fill: var(--accent-color);
+    }
+
     &:hover,
     &:focus {
         border-color: var(--accent-color);
